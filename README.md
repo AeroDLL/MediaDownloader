@@ -18,5 +18,4 @@
 
 1. Repoyu klonlayın:
    ```bash
-   git clone https://github.com/AeroDLL/MediaRipper.git
    cd MediaRipper
