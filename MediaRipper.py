@@ -7,8 +7,10 @@ import yt_dlp
 # Renkleri Başlat
 init(autoreset=True)
 
-# Klasör Ayarı
+# --- AYARLAR ---
+# README dosyasıyla uyumlu olması için klasör adını güncelledik
 DOWNLOAD_FOLDER = "MediaRipper_Downloads"
+
 if not os.path.exists(DOWNLOAD_FOLDER):
     os.makedirs(DOWNLOAD_FOLDER)
 
@@ -34,7 +36,6 @@ def banner():
     """)
     print(Fore.CYAN + "    Supported: YouTube, Instagram, TikTok, X, Twitch\n")
 
-# İlerleme Çubuğu (Hook)
 def progress_hook(d):
     if d['status'] == 'downloading':
         p = d.get('_percent_str', '0%').replace('%','')
@@ -83,6 +84,12 @@ def download_content(url, mode):
             ydl.download([url])
             
         print(Fore.GREEN + Style.BRIGHT + f"\n [OK] İşlem Başarılı! Dosya '{DOWNLOAD_FOLDER}' klasöründe.")
+        
+        # --- YENİ ÖZELLİK: Klasörü Otomatik Aç ---
+        try:
+            os.startfile(DOWNLOAD_FOLDER)
+        except:
+            pass # Linux/Mac ise hata vermesin diye
         
     except Exception as e:
         print(Fore.RED + f"\n [ERROR] Hata oluştu: {e}")
