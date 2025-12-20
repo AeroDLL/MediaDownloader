@@ -1,18 +1,27 @@
 # 🎬 MediaRipper | Ultimate Media Downloader
 
-![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)
+![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-**MediaRipper**, YouTube, Instagram, TikTok ve Twitter gibi platformlardan reklam izlemeden, en yüksek kalitede video ve ses indirmenizi sağlayan açık kaynaklı bir Python aracıdır.
+**MediaRipper**, internetteki popüler platformlardan reklam izlemeden, en yüksek kalitede video ve ses indirmenizi sağlayan açık kaynaklı, hafif ve güçlü bir Python aracıdır.
+
+> 🚀 **Supported Platforms:** YouTube (Video/Playlist), Instagram (Reels), TikTok (No Watermark), Twitter (X), Twitch & More!
 
 ## 🔥 Özellikler
-- **4K Video Support:** En yüksek çözünürlüğü otomatik yakalar.
-- **MP3 Converter:** Videoları otomatik olarak yüksek kaliteli MP3'e çevirir.
-- **Playlist Downloader:** Oynatma listelerini tek tıkla indirir.
-- **No Watermark:** TikTok videolarını filigransız indirir.
+- **4K Video Desteği:** 1080p, 2K ve 4K videoları ses kaybı olmadan indirir.
+- **MP3 Dönüştürücü:** Videoları otomatik olarak yüksek kaliteli (192kbps) MP3 formatına çevirir.
+- **Playlist İndirici:** YouTube oynatma listelerini tek tıkla topluca indirir.
+- **Filigransız TikTok:** TikTok videolarını logosuz (No Watermark) olarak kaydeder.
+- **Hızlı ve Reklamsız:** Doğrudan bağlantı kurar, bekleme süresi yoktur.
 
-## 🛠️ Kurulum
+## 📂 Dosyalar Nereye İniyor?
+İndirme işlemi tamamlandığında, scriptin bulunduğu klasörün içinde otomatik olarak **`MediaRipper_Downloads`** adında bir klasör oluşturulur.
 
-1. Kütüphaneleri kurun:
-   ```bash
-   pip install -r requirements.txt
+Tüm videolar ve müzikler bu klasörün içine kaydedilir:
+```text
+MediaRipper/
+├── MediaRipper.py
+├── requirements.txt
+└── MediaRipper_Downloads/  <-- DOSYALARINIZ BURADA
+    ├── Video_Adı.mp4
+    └── Şarkı_Adı.mp3
